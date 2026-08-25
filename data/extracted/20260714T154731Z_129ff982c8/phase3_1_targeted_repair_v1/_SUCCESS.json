@@ -1,0 +1,8 @@
+{
+  "created_at_utc": "2026-07-17T18:12:48Z",
+  "manifest_sha256": "2e13054529715036c4c4688d720352b3cd686cb28e0a16fa95ed2a4ce1982c96",
+  "pipeline_version": "phase3_1_targeted_repair_v1",
+  "sha256sums_sha256": "c166b257734bf57023203c877f949522ea24a1f779a36e5ab6379e94af4422af",
+  "snapshot_id": "20260714T154731Z_129ff982c8",
+  "status": "COMPLETE_REPRODUCIBLE_TARGETED_REPAIR"
+}

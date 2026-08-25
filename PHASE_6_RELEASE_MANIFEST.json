@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "phase": 6,
+  "pipeline_version": "phase6_opportunity_analysis_v1",
+  "release_status": "LOCALLY_VALIDATED_READY_FOR_COLAB",
+  "required_predecessor": "phase5_hybrid_retrieval_v1",
+  "expected_phase5_manifest_sha256": "2d48709a8e4b6408d99505dc4fe7c075f6f6406970ee0c5cfead93288ed97ec3",
+  "phase5_1_status": "PENDING_HUMAN_REVIEWERS_NOT_BYPASSED",
+  "validation": {
+    "phase6_tests_passed": 29,
+    "full_project_tests_passed": 93,
+    "notebook_code_cells_executed": 6,
+    "idempotent_rerun_passed": true,
+    "sample_requirements": 6,
+    "sample_visible_filter_proposals": 3,
+    "external_llm_calls": 0,
+    "business_filters_auto_applied": 0,
+    "source_mutation_calls": 0
+  },
+  "artifacts": [
+    {
+      "path": "07_PHASE_6_OPPORTUNITY_ANALYSIS.ipynb",
+      "size_bytes": 11283,
+      "sha256": "8eb8a852fe736f549cd7828fc286d2e05baccc441518731877715d28ae6bf151"
+    },
+    {
+      "path": "PHASE_6_OPPORTUNITY_ANALYSIS_PACKAGE.zip",
+      "size_bytes": 15934,
+      "sha256": "1c8e8ea1e1a9bc80536d63389625b53d994143ccfd991edc38e9a4555d44c6fd"
+    },
+    {
+      "path": "PHASE_6_PACKAGE_MANIFEST.json",
+      "size_bytes": 1445,
+      "sha256": "cbf65c473fa45511e2adaa981f335b8e952342aefa1575232a4c80f0e77070d7"
+    }
+  ]
+}

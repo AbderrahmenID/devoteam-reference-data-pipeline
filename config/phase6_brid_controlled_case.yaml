@@ -1,0 +1,14 @@
+schema_version: 2
+phase: 6
+pipeline_version: phase6_brid_controlled_case_v2
+label: SYNTHETIC_TEST_ONLY
+source:
+  expected_sha256: 2098dd1874292d2218e271bd3c0ac9d5f5b44c871de48ad24adf74bd08f335ff
+  expected_pages: 7
+  language: fr
+controls:
+  external_llm_enabled: false
+  human_review_required: true
+  filters_auto_apply: false
+  phase5_2_blocked_until_approval: true
+output_root: data/opportunities

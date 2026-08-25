@@ -1,0 +1,38 @@
+{
+  "automatic_production_promotion": false,
+  "expected_phase5_manifest_sha256": "2d48709a8e4b6408d99505dc4fe7c075f6f6406970ee0c5cfead93288ed97ec3",
+  "external_llm_calls": 0,
+  "files": {
+    "config/phase6_opportunity.yaml": {
+      "sha256": "1500e8f7141dec68fa58d2046f6b02f7120484393d3a1f6cce2c161339b4f19b",
+      "size_bytes": 2972
+    },
+    "docs/PHASE_6_RUNBOOK.md": {
+      "sha256": "6eeac728f02abafd2e0bdc98eacd2663e53f16e1bdf058063ef4abb85efd2f3e",
+      "size_bytes": 2170
+    },
+    "requirements/phase6.txt": {
+      "sha256": "4bce1fbac2faa4443ef3d08007dba6fe1803eedfa8ccfe8eb92fec2be100f7bf",
+      "size_bytes": 81
+    },
+    "src/devoteam_reference_ai/phase6_opportunity.py": {
+      "sha256": "10449ab061de7c6a3460db7a60dd5fcc561f4daa4e36bf39170f6693808023b3",
+      "size_bytes": 31009
+    },
+    "tests/test_phase6_opportunity.py": {
+      "sha256": "44445a6c24cc9d984079a277915047b946611d3d1aab2818c9dfc2c1978446a0",
+      "size_bytes": 11932
+    }
+  },
+  "full_regression_test_result": "93 passed",
+  "human_checkpoint": "OPPORTUNITY_REQUIREMENT_AND_FILTER_REVIEW",
+  "package_mode": "ADDITIVE_EXTENSION",
+  "package_type": "SAFE_PROJECT_OVERLAY",
+  "phase": 6,
+  "phase5_1_expert_evaluation_bypassed": false,
+  "phase6_test_result": "29 passed",
+  "pipeline_version": "phase6_opportunity_analysis_v1",
+  "required_predecessor": "phase5_hybrid_retrieval_v1",
+  "schema_version": 1,
+  "source_mutation_allowed": false
+}

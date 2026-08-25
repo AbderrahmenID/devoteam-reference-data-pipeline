@@ -1,0 +1,102 @@
+{
+  "files": [
+    {
+      "path": "config/phase6_brid_controlled_case.yaml",
+      "sha256": "6d30c910925706f61409db4f55f4f6c1a961095f549ede66b85404a3a11e7754",
+      "size_bytes": 400
+    },
+    {
+      "path": "docs/PHASE_6_BRID_RUNBOOK.md",
+      "sha256": "de540b32551af783d4d2ef7d5ecbe8ffadeaeb80428b6587af0ec6efd2eadba0",
+      "size_bytes": 642
+    },
+    {
+      "path": "requirements/phase6_brid.txt",
+      "sha256": "29c29741031161d68e2323496633173fa1954d87185619fd9a3ee7939d379d7b",
+      "size_bytes": 61
+    },
+    {
+      "path": "tests/test_phase6_brid_contract.py",
+      "sha256": "86fcad711980f0e5b7cded82d178848d5fd1aca1853806cd935c38e387c33a86",
+      "size_bytes": 2458
+    },
+    {
+      "path": "11_PHASE_6_BRID_CONTROLLED_CASE.ipynb",
+      "sha256": "c4b5a99bf57ab55a108fcff48b3bb2bf0b6c1fa4c74f0320a9ccc5edeffdf32f",
+      "size_bytes": 3767
+    },
+    {
+      "path": "scripts/run_phase6_brid_case.py",
+      "sha256": "ecb0128d2ed4eb1c3bdc56f2f8e552ff2249a2e7a377b5eb8183ba1f99c77c37",
+      "size_bytes": 1451
+    },
+    {
+      "path": "human_inputs/phase6/OPPORTUNITY_INPUT_BRID_SYNTHETIC.pdf",
+      "sha256": "2098dd1874292d2218e271bd3c0ac9d5f5b44c871de48ad24adf74bd08f335ff",
+      "size_bytes": 17925
+    },
+    {
+      "path": "data/opportunities/OPP-2098dd1874292d22/phase6_brid_controlled_case_v2/BRID_PHASE_6_REVIEW.xlsx",
+      "sha256": "780d2f38f5ee80d869bde0b6e48b80b4550fb8642ea172a594bb55ffb4e7f300",
+      "size_bytes": 14708
+    },
+    {
+      "path": "data/opportunities/OPP-2098dd1874292d22/phase6_brid_controlled_case_v2/PHASE_6_BRID_MANIFEST.json",
+      "sha256": "0a4ffe3d83f624309cd0e2a12027556c80eda2d6cfc474d1f6f6909cba2ebf49",
+      "size_bytes": 664
+    },
+    {
+      "path": "data/opportunities/OPP-2098dd1874292d22/phase6_brid_controlled_case_v2/PHASE_6_BRID_QUALITY_GATE.json",
+      "sha256": "2aecbb16f907a423d8d8c48346f3aac206723c139229b1eeb854801403f2ddac",
+      "size_bytes": 822
+    },
+    {
+      "path": "data/opportunities/OPP-2098dd1874292d22/phase6_brid_controlled_case_v2/PHASE_6_BRID_REPORT.md",
+      "sha256": "ce0e70681dac4724c0a1906f6be1ba3f4fb66d351b104bf91cf6e122c89342c4",
+      "size_bytes": 1013
+    },
+    {
+      "path": "data/opportunities/OPP-2098dd1874292d22/phase6_brid_controlled_case_v2/SHA256SUMS.txt",
+      "sha256": "06a11a84a777bf0de6a96eea078109d6196468042ce97d41bd46ed9d20a1d472",
+      "size_bytes": 891
+    },
+    {
+      "path": "data/opportunities/OPP-2098dd1874292d22/phase6_brid_controlled_case_v2/_SUCCESS.json",
+      "sha256": "a50fe0c57fd917f253ced963cde84ae33eb3ff39f83ce4c478c46a0e0288ca91",
+      "size_bytes": 313
+    },
+    {
+      "path": "data/opportunities/OPP-2098dd1874292d22/phase6_brid_controlled_case_v2/eligibility_rules.json",
+      "sha256": "9e9e5603133507385410098b294a6c2e36effc3558310f175a2b3928c3ab4160",
+      "size_bytes": 3953
+    },
+    {
+      "path": "data/opportunities/OPP-2098dd1874292d22/phase6_brid_controlled_case_v2/filter_proposals.json",
+      "sha256": "be613070657b284f68ca76bafd6990fc9713e8563659ba8148304f5d90fea696",
+      "size_bytes": 3914
+    },
+    {
+      "path": "data/opportunities/OPP-2098dd1874292d22/phase6_brid_controlled_case_v2/matching_contract.json",
+      "sha256": "c9949663b034d9ceb71bbae37efc7eb245d113a9541b425358c359a5326deb1a",
+      "size_bytes": 1376
+    },
+    {
+      "path": "data/opportunities/OPP-2098dd1874292d22/phase6_brid_controlled_case_v2/offer_profile.json",
+      "sha256": "7841a2bc373eb624b58af88380c7e4953cc00d2cfa5b0fb0a8f99dd4ca1aaf38",
+      "size_bytes": 1334
+    },
+    {
+      "path": "data/opportunities/OPP-2098dd1874292d22/phase6_brid_controlled_case_v2/requirements.jsonl",
+      "sha256": "5e4840c8d90681b72bf03a7209e7d5a4236fc1e14d3a3621c19c3467fc1316d9",
+      "size_bytes": 6524
+    },
+    {
+      "path": "data/opportunities/OPP-2098dd1874292d22/phase6_brid_controlled_case_v2/scoring_model.json",
+      "sha256": "2edfa27836a664854725c267b025b1fb8c51e83f3ced0dc5ce3e60e92f553dba",
+      "size_bytes": 1915
+    }
+  ],
+  "label": "SYNTHETIC_TEST_ONLY",
+  "release": "phase6_brid_controlled_case",
+  "schema_version": 1
+}

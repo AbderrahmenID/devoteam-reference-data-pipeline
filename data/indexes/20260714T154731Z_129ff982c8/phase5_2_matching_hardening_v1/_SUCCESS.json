@@ -1,0 +1,7 @@
+{
+  "created_at_utc": "2026-07-24T14:09:32Z",
+  "manifest_sha256": "17ec179da0c191173db15bde1662944f4c3c90f55deafb365a1c8dc65167b1c8",
+  "pipeline_version": "phase5_2_matching_hardening_v1",
+  "sha256sums_sha256": "b45b766b877d7da2a153c38934dfd30449c51f72a23585507c467dd1f44b96b0",
+  "status": "COMPLETE_REPRODUCIBLE_PHASE_5_2"
+}

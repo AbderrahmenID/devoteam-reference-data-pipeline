@@ -1,0 +1,56 @@
+{
+  "actual_data_dry_run": {
+    "base_shortlist_eligible_references": 138,
+    "citation_completeness": 1.0,
+    "citation_correctness_status": "PENDING_HUMAN_AUDIT",
+    "citation_integrity": 1.0,
+    "data_quality_issues": 200,
+    "ineligible_candidates": 5,
+    "mode": "DETERMINISTIC_NONPRODUCTION_QUERY_VECTOR_ADAPTER",
+    "recommendations": 10,
+    "source_references": 161,
+    "status": "TECHNICAL_PASS_SAMPLE_ONLY"
+  },
+  "authorization_before_scoring_required": true,
+  "citation_correctness_requires_human_audit": true,
+  "expert_gold_set_required_for_production_promotion": true,
+  "external_embedding_api_calls": 0,
+  "external_llm_calls": 0,
+  "files": {
+    "config/phase5_2_matching_hardening.yaml": {
+      "sha256": "2d3c5f4f28410558c90451830ebdb7254dd2db2e19a8602b012cc0a7bae8de7d",
+      "size_bytes": 8852
+    },
+    "docs/PHASE_5_2_RUNBOOK.md": {
+      "sha256": "c62dc7fb5809d62e15c3ac17f7686f58a307e57dc2ea56c74a612e56ec4a321b",
+      "size_bytes": 3882
+    },
+    "requirements/phase5_2.txt": {
+      "sha256": "d768c6a1d13b00247957c40399492a0823005174d0c26683d92d526703695094",
+      "size_bytes": 15
+    },
+    "src/devoteam_reference_ai/phase5_2_matching.py": {
+      "sha256": "bceeea1bb8ae79a47bbf145c414a68e4d60254a4583d4360a434c2b83079a0cd",
+      "size_bytes": 80133
+    },
+    "tests/test_phase5_2_matching.py": {
+      "sha256": "75954dacebce39fb5ccdce59bf5f008f234b10b76af53be3143787ac35fce0b0",
+      "size_bytes": 20281
+    }
+  },
+  "full_regression_test_result": "172 passed",
+  "hard_filters_before_scoring_required": true,
+  "must_coverage_gate_required": true,
+  "package": "phase5_2_matching_engine_hardening",
+  "package_mode": "ADDITIVE_EXTENSION",
+  "package_type": "SAFE_PROJECT_OVERLAY",
+  "phase": "5.2",
+  "phase5_2_test_result": "30 passed",
+  "pipeline_version": "phase5_2_matching_hardening_v1",
+  "preserved_baseline": "phase7_evidence_recommendations_v1",
+  "production_quality_claim_allowed": false,
+  "required_predecessor": "phase5_hybrid_retrieval_v1",
+  "schema_version": 1,
+  "source_mutation_allowed": false,
+  "spreadsheet_formula_serialization_required": true
+}

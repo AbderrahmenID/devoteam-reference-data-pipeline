@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "release_id": "phase5_2_matching_hardening_v1",
+  "release_date": "2026-07-24",
+  "status": "READY_FOR_USER_E5_EXECUTION",
+  "project_contract": {
+    "main_phase_count_unchanged": true,
+    "phase": "5.2",
+    "purpose": "Additive matching-engine and data-contract hardening",
+    "source_artifacts_mutated": false,
+    "production_quality_claim_allowed": false,
+    "production_promotion_gate": "PHASE_5_1_EXPERT_EVALUATION"
+  },
+  "artifacts": {
+    "10_PHASE_5_2_MATCHING_ENGINE_HARDENING.ipynb": {
+      "sha256": "c28f947cf717cc23aa17c3f79e0e906357764352e856c6b2157429ddf824182d",
+      "size_bytes": 13132
+    },
+    "PHASE_5_2_MATCHING_ENGINE_HARDENING_PACKAGE.zip": {
+      "sha256": "1486ce3436366aa8c47e91d869a962d52545f8ae2e3cf59949a43ba00c095054",
+      "size_bytes": 30307
+    },
+    "PHASE_5_2_PACKAGE_MANIFEST.json": {
+      "sha256": "4f8d323e808e978d2c1b57281e28f52ed782ccbae4c25aa830fa5d9107a14e47",
+      "size_bytes": 2129
+    },
+    "config/phase5_2_matching_hardening.yaml": {
+      "sha256": "2d3c5f4f28410558c90451830ebdb7254dd2db2e19a8602b012cc0a7bae8de7d",
+      "size_bytes": 8852
+    },
+    "src/devoteam_reference_ai/phase5_2_matching.py": {
+      "sha256": "bceeea1bb8ae79a47bbf145c414a68e4d60254a4583d4360a434c2b83079a0cd",
+      "size_bytes": 80133
+    },
+    "tests/test_phase5_2_matching.py": {
+      "sha256": "75954dacebce39fb5ccdce59bf5f008f234b10b76af53be3143787ac35fce0b0",
+      "size_bytes": 20281
+    },
+    "docs/PHASE_5_2_RUNBOOK.md": {
+      "sha256": "c62dc7fb5809d62e15c3ac17f7686f58a307e57dc2ea56c74a612e56ec4a321b",
+      "size_bytes": 3882
+    },
+    "requirements/phase5_2.txt": {
+      "sha256": "d768c6a1d13b00247957c40399492a0823005174d0c26683d92d526703695094",
+      "size_bytes": 15
+    }
+  },
+  "validation": {
+    "notebook_schema": "PASS",
+    "notebook_code_ast": "PASS",
+    "notebook_orchestration": {
+      "status": "PASS",
+      "method": "All six code cells executed sequentially in one isolated Python namespace against a copied project and an existing verified local Phase 5.2 output",
+      "model_loading": "SKIPPED_BECAUSE_VERIFIED_SUCCESS_MARKER_EXISTED"
+    },
+    "phase5_2_tests": {
+      "status": "PASS",
+      "passed": 30,
+      "failed": 0
+    },
+    "full_project_regression": {
+      "status": "PASS",
+      "passed": 172,
+      "failed": 0
+    },
+    "signed_data_dry_run": {
+      "status": "PASS",
+      "scope": "Technical control-path validation only",
+      "query_embedding_adapter": "DETERMINISTIC_NONPRODUCTION_768D",
+      "publishable_relevance_result": false,
+      "synthetic_outputs_included_in_release": false
+    },
+    "real_e5_execution": "PENDING_USER_COLAB_RUN"
+  },
+  "release_notes": [
+    "The release preserves all Phase 1-8 v1 outputs.",
+    "The release must be run before rerunning the real Phase 6-8 business flow.",
+    "A technical PASS does not replace Phase 5.1 relevance judgments or human citation-correctness review."
+  ]
+}

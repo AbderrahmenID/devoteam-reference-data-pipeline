@@ -1,0 +1,8 @@
+{
+  "created_at_utc": "2026-07-17T16:59:22Z",
+  "manifest_sha256": "ef941b67ef521d6208129d84700a765d1c42cdc5ca11622829495f27dfde3aec",
+  "pipeline_version": "phase3_extract_v1",
+  "sha256sums_sha256": "29e1a861894a2faf61f4faf1c75469f6f081e8df90ccf8a32d725547bd1fe1c9",
+  "snapshot_id": "20260714T154731Z_129ff982c8",
+  "status": "COMPLETE_REPRODUCIBLE_EXTRACTION"
+}

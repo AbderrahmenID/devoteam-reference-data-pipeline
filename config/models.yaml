@@ -1,0 +1,27 @@
+schema_version: 1
+selection_status: evaluation_required
+
+embedding:
+  provider: unselected
+  model: unselected
+  multilingual_required: true
+  local_execution_preferred: true
+
+reranker:
+  provider: unselected
+  model: unselected
+  cross_encoder_required: true
+
+llm:
+  provider: provider_neutral
+  model: unselected
+  instruction_tuned_required: true
+  structured_output_required: true
+  external_calls_enabled: false
+  temperature_default: 0.0
+
+promotion_policy:
+  require_gold_set_comparison: true
+  require_security_approval: true
+  require_version_recording: true
+  allow_fine_tuning_without_approved_labels: false

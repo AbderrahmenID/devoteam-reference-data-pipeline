@@ -1,0 +1,27 @@
+{
+  "actual_data_dry_run": "PASS",
+  "hybrid_mechanical_path": "PASS",
+  "label": "SYNTHETIC_TEST_ONLY",
+  "notebook": {
+    "name": "12_PHASE_7_BRID_HYBRID_MATCHING.ipynb",
+    "sha256": "737fc2bca962b7d05556ca4c7a4fa8024f4e72c0ae04b4402d937259f9166284",
+    "size_bytes": 12446
+  },
+  "notebook_runtime_contract": "single_cell_fresh_kernel_safe_v3",
+  "package": {
+    "name": "PHASE_7_BRID_HYBRID_MATCHING_PACKAGE.zip",
+    "sha256": "e61e76aeea5df4581248d6d0d6f505361dfd756cf4f278d269cd4b01b5bd2966",
+    "size_bytes": 21812
+  },
+  "package_manifest": {
+    "files": 6,
+    "name": "PHASE_7_BRID_PACKAGE_MANIFEST.json",
+    "sha256": "151e7edfd3fb92fb59ad3b115429d3ca5225786298c6cffa1ae487840ff3224e"
+  },
+  "phase": 7,
+  "pipeline_version": "phase7_brid_hybrid_matching_v2",
+  "production_promotion": "BLOCKED",
+  "real_local_e5_run": "PENDING_COLAB_EXECUTION",
+  "schema_version": 1,
+  "validated_controls": 45
+}

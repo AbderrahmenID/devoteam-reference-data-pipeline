@@ -1,0 +1,298 @@
+schema_version: 2
+phase: "5.2"
+pipeline_version: phase5_2_matching_hardening_v1
+
+input:
+  snapshot_id: 20260714T154731Z_129ff982c8
+  phase4_run_name: phase4_corpus_v1
+  phase5_run_name: phase5_hybrid_retrieval_v1
+  sample_opportunity_id: OPP-099e11d21c9e4e6c
+  phase6_run_name: phase6_opportunity_analysis_v1
+  phase7_baseline_run_name: phase7_evidence_recommendations_v1
+  expected_phase4_manifest_sha256: 219643d0b1fa7ae81ebd041615a1f2c56b8cdca56f782b557a1c84f8aa599104
+  expected_phase4_references_sha256: 13f9605cdd0fd47817e8b4c111a931d61a18413dc67202044e776d4ab4977b30
+  expected_phase4_documents_sha256: f7975b684941786033b2e2288cb8037caff9ed309740e0e5e0b25e23b11ff5df
+  expected_phase5_manifest_sha256: 2d48709a8e4b6408d99505dc4fe7c075f6f6406970ee0c5cfead93288ed97ec3
+  expected_phase5_sha256sums_sha256: b5601ad302ab8dbaa416a54ac4dcff574e931174926d62ed87379204833c1729
+  expected_chunk_lookup_sha256: 50f5276fcf514c43866143dc24ee88e09320715179fa6ee5a5b5b4d2a2f3c200
+  expected_bm25_index_sha256: a93b29bdb2f0e3b77c16df6066fabb3ae46f5a9bb938de2aa074c08cff6248f1
+  expected_bm25_vocabulary_sha256: 701f9a19753e249dcc253ce6b393d36c6835f345aaed5beac662d5b9062e9d72
+  expected_embeddings_sha256: 542699ae0621b11dfe3ebdbac389bda4e14a42de9afbd436a93c714cc1f51852
+  expected_chunks: 1185
+  expected_references: 161
+  expected_documents: 134
+
+security:
+  classification: INTERNAL
+  validation_allowed_classifications: [PUBLIC, INTERNAL]
+  external_llm_enabled: false
+  external_embedding_api_enabled: false
+  raw_offer_logging_allowed: false
+  security_filters_disableable: false
+  source_mutation_allowed: false
+  authorization_before_scoring_required: true
+  inaccessible_facet_counts_allowed: false
+
+normalization:
+  year_minimum: 1990
+  year_maximum: 2035
+  ongoing_tokens:
+    - present
+    - présent
+    - en cours
+    - ongoing
+    - current
+  country_aliases:
+    tunisie: TN
+    tunise: TN
+    tunisia: TN
+    maroc: MA
+    morocco: MA
+    cote d ivoire: CI
+    abidjan: CI
+    mauritanie: MR
+    mauritania: MR
+    libye: LY
+    libya: LY
+    cameroun: CM
+    cameroon: CM
+    mali: ML
+    senegal: SN
+    france: FR
+    algerie: DZ
+    benin: BJ
+    rwanda: RW
+    burkina faso: BF
+    niger: NE
+  countries:
+    TN: {name: Tunisie, region: Afrique, subregion: Afrique du Nord}
+    MA: {name: Maroc, region: Afrique, subregion: Afrique du Nord}
+    CI: {name: Côte d'Ivoire, region: Afrique, subregion: Afrique de l'Ouest}
+    MR: {name: Mauritanie, region: Afrique, subregion: Afrique de l'Ouest}
+    LY: {name: Libye, region: Afrique, subregion: Afrique du Nord}
+    CM: {name: Cameroun, region: Afrique, subregion: Afrique centrale}
+    ML: {name: Mali, region: Afrique, subregion: Afrique de l'Ouest}
+    SN: {name: Sénégal, region: Afrique, subregion: Afrique de l'Ouest}
+    FR: {name: France, region: Europe, subregion: Europe de l'Ouest}
+    DZ: {name: Algérie, region: Afrique, subregion: Afrique du Nord}
+    BJ: {name: Bénin, region: Afrique, subregion: Afrique de l'Ouest}
+    RW: {name: Rwanda, region: Afrique, subregion: Afrique de l'Est}
+    BF: {name: Burkina Faso, region: Afrique, subregion: Afrique de l'Ouest}
+    NE: {name: Niger, region: Afrique, subregion: Afrique de l'Ouest}
+  sector_aliases:
+    banque: BANKING
+    banking: BANKING
+    assurance: INSURANCE
+    insurance: INSURANCE
+    adm pub: PUBLIC_ADMINISTRATION
+    administration publique: PUBLIC_ADMINISTRATION
+    entreprise pub: PUBLIC_ENTERPRISE
+    entreprise publique: PUBLIC_ENTERPRISE
+    industrie: INDUSTRY
+    regie financiere: REVENUE_AUTHORITY
+    telecom: TELECOM
+    telecommunications: TELECOM
+    prive: PRIVATE_SECTOR
+    utilities: UTILITIES
+  offering_aliases:
+    pca pci: BUSINESS_CONTINUITY
+    amo a: AMOA
+    amoa: AMOA
+    sdsi: IT_STRATEGY
+    sdsi amoa: IT_STRATEGY_AMOA
+    cyber security: CYBERSECURITY
+    cybersecurity: CYBERSECURITY
+    etudes: STUDIES
+    etude: STUDIES
+    pmo: PMO
+    api gateway: API_MANAGEMENT
+    cloud: CLOUD
+  evidence_types:
+    attestation originale: ATTESTATION_ORIGINAL
+    attestation scannee: ATTESTATION_SCAN
+    contrat: CONTRACT
+    bon de commande: PURCHASE_ORDER
+    pv: MINUTES
+    sans justif: NONE
+  evidence_strength:
+    ATTESTATION_ORIGINAL: 1.00
+    ATTESTATION_SCAN: 0.90
+    MINUTES: 0.80
+    CONTRACT: 0.70
+    PURCHASE_ORDER: 0.60
+    OTHER: 0.40
+    NONE: 0.00
+  capability_taxonomy:
+    DIGITAL_STRATEGY:
+      - strategie digitale
+      - stratégie digitale
+      - transformation digitale
+      - economie numerique
+      - économie numérique
+    IT_GOVERNANCE:
+      - gouvernance
+      - schema directeur
+      - schéma directeur
+      - sdsi
+    TARGET_ARCHITECTURE:
+      - architecture cible
+      - urbanisation
+      - architecture d entreprise
+    ROADMAP:
+      - roadmap
+      - feuille de route
+      - plan d actions
+      - plan d’action
+    BUSINESS_CONTINUITY:
+      - pca
+      - pci
+      - continuite d activite
+      - continuité d’activité
+    CYBERSECURITY:
+      - cyber
+      - securite
+      - sécurité
+      - risque
+    DATA_GOVERNANCE:
+      - gouvernance des donnees
+      - gouvernance des données
+      - data governance
+    CHANGE_MANAGEMENT:
+      - conduite du changement
+      - change management
+  technology_taxonomy:
+    API_MANAGEMENT:
+      - api gateway
+      - api management
+      - kong
+    CLOUD:
+      - cloud
+      - g-cloud
+      - g cloud
+    IPV6:
+      - ipv6
+    CORE_BANKING:
+      - core banking
+      - systeme bancaire central
+      - système bancaire central
+    DATA_PLATFORM:
+      - data platform
+      - data warehouse
+      - big data
+    NETWORK:
+      - backbone
+      - vpn
+      - reseau
+      - réseau
+    DIGITAL_IDENTITY:
+      - identite numerique
+      - identité numérique
+      - iam
+  engagement_taxonomy:
+    AUDIT:
+      - audit
+      - diagnostic
+      - etat des lieux
+      - état des lieux
+    STRATEGY:
+      - strategie
+      - stratégie
+      - schema directeur
+      - schéma directeur
+    IMPLEMENTATION:
+      - mise en oeuvre
+      - mise en œuvre
+      - implementation
+      - déploiement
+    AMOA:
+      - amoa
+      - assistance a maitrise d ouvrage
+      - assistance à maîtrise d’ouvrage
+    PMO:
+      - pmo
+      - gestion de projet
+    TRAINING:
+      - formation
+      - transfert de competences
+      - transfert de compétences
+
+retrieval:
+  supported_modes: [bm25, dense, hybrid]
+  default_mode: hybrid
+  query_maximum_characters: 4000
+  candidate_chunks_per_requirement: 100
+  evidence_chunks_per_reference_requirement: 3
+  fusion:
+    method: reciprocal_rank_fusion
+    rrf_k: 60
+    lexical_weight: 0.75
+    dense_weight: 0.25
+    candidate_pool_per_retriever: 100
+  reranking:
+    strategy: deterministic_evidence_v1
+    retrieval_weight: 0.80
+    term_coverage_weight: 0.20
+    cross_encoder_enabled: false
+    cross_encoder_requires_expert_evaluation: true
+  fusion_sweep:
+    - {name: hybrid_90_10, lexical_weight: 0.90, dense_weight: 0.10}
+    - {name: hybrid_80_20, lexical_weight: 0.80, dense_weight: 0.20}
+    - {name: hybrid_75_25, lexical_weight: 0.75, dense_weight: 0.25}
+    - {name: hybrid_70_30, lexical_weight: 0.70, dense_weight: 0.30}
+    - {name: hybrid_60_40, lexical_weight: 0.60, dense_weight: 0.40}
+    - {name: hybrid_50_50, lexical_weight: 0.50, dense_weight: 0.50}
+
+eligibility:
+  require_evidence_for_shortlist: true
+  require_document_retrieval_eligible: true
+  allowed_data_quality_statuses: [PASS, PARTIAL_PAGE_EXCLUSION]
+  must_requirement_gate: true
+  diagnostic_ineligible_candidates_allowed: true
+  maximum_one_per_duplicate_group: true
+  evidence_policy_patterns:
+    - sans document justificatif
+    - sans justificatif
+    - no supporting document
+    - without supporting evidence
+
+scoring:
+  requirement_weights:
+    MUST: 1.00
+    SHOULD: 0.70
+    PREFERRED: 0.40
+    CONTEXT: 0.15
+  coverage_threshold: 0.30
+  component_weights:
+    relevance: 0.60
+    coverage: 0.20
+    evidence_quality: 0.10
+    recency: 0.05
+    soft_preference_fit: 0.05
+  reference_year: 2026
+  maximum_recommendations: 10
+
+evaluation:
+  label_source: BOOTSTRAP_METADATA_NOT_EXPERT
+  production_quality_claim_allowed: false
+  expert_gold_set_required_for_promotion: true
+  expert_evaluation_phase: "5.1"
+  citation_audit_sample_size: 30
+  technical_gates:
+    reference_id_completeness: 1.00
+    nonempty_country_mapping: 1.00
+    nonempty_year_parse_rate: 0.95
+    access_control_prefilter: 1.00
+    exclusions_enforced: 1.00
+    must_gate_enforced: 1.00
+    spreadsheet_serialization_safe: 1.00
+    citation_completeness: 1.00
+    citation_integrity: 1.00
+    duplicate_shortlist_control: 1.00
+
+output:
+  root: data/indexes
+  run_name: phase5_2_matching_hardening_v1
+  success_marker: _SUCCESS.json
+  report_name: PHASE_5_2_REPORT.md
+  manifest_name: PHASE_5_2_MANIFEST.json
+  quality_gate_name: PHASE_5_2_QUALITY_GATE.json

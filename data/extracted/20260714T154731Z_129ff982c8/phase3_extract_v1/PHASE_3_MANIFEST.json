@@ -1,0 +1,23 @@
+{
+  "blank_pages": 2,
+  "completed_at_utc": "2026-07-17T16:59:22Z",
+  "digital_pages": 43,
+  "document_failures": 0,
+  "documents_completed": 134,
+  "documents_expected": 134,
+  "external_llm_calls": 0,
+  "failed_pages": 4,
+  "missing_evidence_targets": 21,
+  "native_fallback_pages": 1,
+  "ocr_pages": 364,
+  "pages_total": 408,
+  "phase": 3,
+  "pipeline_version": "phase3_extract_v1",
+  "qa_gate": "REVIEW_REQUIRED",
+  "review_pages": 17,
+  "schema_version": 1,
+  "snapshot_id": "20260714T154731Z_129ff982c8",
+  "snapshot_manifest_sha256": "bdb951f42549b60dc27dc5f30e06ad362470ba802ad9dd0fab9081ead27fe4d0",
+  "source_snapshot_mutation_calls": 0,
+  "status": "PASS"
+}

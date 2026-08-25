@@ -1,0 +1,63 @@
+{
+  "bm25": {
+    "algorithm": "BM25Okapi",
+    "terms": 12322,
+    "tokenizer_version": "unicode_fold_v1"
+  },
+  "embedding": {
+    "device": "cuda:0",
+    "dimensions": 768,
+    "license": "MIT",
+    "local_execution_only": true,
+    "model_id": "intfloat/multilingual-e5-base",
+    "provider": "local_sentence_transformers",
+    "revision": "a114a4100c6714cf21651971eefe9191a4415dbb"
+  },
+  "faiss": {
+    "dimensions": 768,
+    "index_type": "IndexFlatIP",
+    "rows": 1185
+  },
+  "filters": {
+    "hard_filters_exclude": true,
+    "hidden_llm_filters_allowed": false,
+    "security_field": "security_classification",
+    "security_filters_disableable": false,
+    "supported_exact": {
+      "attestation_available": "attestation_available_values_json",
+      "business_unit": "business_unit_values_json",
+      "client": "client_values_json",
+      "country": "country_values_json",
+      "data_quality_status": "data_quality_status",
+      "document_type": "document_type",
+      "offering": "offering_values_json",
+      "project_year": "project_year_values_json",
+      "sector": "sector_values_json",
+      "service_nature": "service_nature_values_json"
+    },
+    "supported_ranges": {
+      "year_after": "project_year_values_json",
+      "year_before": "project_year_values_json"
+    }
+  },
+  "hybrid": {
+    "candidate_pool_per_retriever": 100,
+    "default_top_k": 10,
+    "dense_weight": 0.5,
+    "document_evidence_chunks": 3,
+    "fusion": "reciprocal_rank_fusion",
+    "lexical_weight": 0.5,
+    "rrf_k": 60
+  },
+  "package_versions": {
+    "faiss-cpu": "1.14.3",
+    "numpy": "2.0.2",
+    "pandas": "2.2.2",
+    "pyarrow": "18.1.0",
+    "sentence-transformers": "3.4.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.6"
+  },
+  "pipeline_version": "phase5_hybrid_retrieval_v1",
+  "schema_version": 1
+}

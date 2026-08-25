@@ -1,0 +1,41 @@
+schema_version: 1
+phase: 8
+pipeline_version: phase8_reference_dossier_v1
+
+input:
+  snapshot_id: 20260714T154731Z_129ff982c8
+  phase4_run_name: phase4_corpus_v1
+  expected_references_sha256: 13f9605cdd0fd47817e8b4c111a931d61a18413dc67202044e776d4ab4977b30
+  expected_template_sha256: a58e409010992f9a8b7a958ebbc7bf7d3fe06dc1043287fd2db72bedca5334da
+  expected_template_size_bytes: 16228690
+  template_relative_path: human_inputs/phase8/REFERENCE_TEMPLATE.docx
+
+review:
+  real_shortlist_requires_complete_review: true
+  synthetic_sample_auto_selection_allowed: true
+  synthetic_sample_top_n: 5
+
+generation:
+  mode: deterministic_template_derived
+  language: fr
+  maximum_references: 10
+  maximum_description_characters: 1000
+  maximum_evidence_items_per_reference: 2
+  minimum_evidence_grounding_overlap: 0.15
+  copy_source_documents_into_output: false
+  embed_source_page_images: false
+  external_llm_enabled: false
+  external_translation_enabled: false
+  automatic_client_delivery: false
+
+security:
+  classification: INTERNAL
+  raw_opportunity_logging_allowed: false
+  source_mutation_allowed: false
+  hidden_content_generation_allowed: false
+
+output:
+  root: data/deliverables
+  success_marker: _SUCCESS.json
+  docx_name: REFERENCE_DOSSIER_DRAFT.docx
+  pdf_name: REFERENCE_DOSSIER_DRAFT.pdf

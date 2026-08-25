@@ -1,0 +1,49 @@
+{
+  "automatic_production_promotion": false,
+  "canonical_reference_filter_after_document_mapping": true,
+  "cross_encoder_calls": 0,
+  "expected_phase5_manifest_sha256": "2d48709a8e4b6408d99505dc4fe7c075f6f6406970ee0c5cfead93288ed97ec3",
+  "external_llm_calls": 0,
+  "files": {
+    "config/phase7_recommendations.yaml": {
+      "sha256": "e0b9e65b6b2402e2bc082b375c437644e8d71171b428c6fabd419bee38aaa64f",
+      "size_bytes": 2157
+    },
+    "docs/PHASE_7_RUNBOOK.md": {
+      "sha256": "5da85278bdd80a6286f4b5e1ee03851650477f0d7b2fdf143af1a18772cc771a",
+      "size_bytes": 2053
+    },
+    "requirements/phase7.txt": {
+      "sha256": "20b0f2e43d7781b0f17daffd6dde8b38d21b82826fa28eee690ce82015f3bdad",
+      "size_bytes": 124
+    },
+    "src/devoteam_reference_ai/phase7_recommendations.py": {
+      "sha256": "c45248abfc8448b463d4b4207eafd7a36876ab916e28d0c5711f22300fb8f7b7",
+      "size_bytes": 40206
+    },
+    "tests/test_phase7_recommendations.py": {
+      "sha256": "2c27ee470171c5154bee3bacec53df199bda4d754384ab666c0a2f199eab48a3",
+      "size_bytes": 12267
+    }
+  },
+  "full_regression_test_result": "114 passed",
+  "human_checkpoint": "BUSINESS_SHORTLIST_REVIEW",
+  "package_mode": "ADDITIVE_EXTENSION",
+  "package_type": "SAFE_PROJECT_OVERLAY",
+  "phase": 7,
+  "phase5_1_expert_evaluation_bypassed": false,
+  "phase7_test_result": "21 passed",
+  "pipeline_version": "phase7_evidence_recommendations_v1",
+  "required_predecessor": "phase6_opportunity_analysis_v1",
+  "retrieval_mode": "bm25_secure_baseline",
+  "sample_validation": {
+    "citation_coverage": 1.0,
+    "evidence_rows": 74,
+    "recommendations": 10,
+    "requirement_gaps": 0,
+    "status": "TECHNICAL_PASS_SAMPLE_ONLY"
+  },
+  "schema_version": 1,
+  "security_and_hard_filters_before_scoring": true,
+  "source_mutation_allowed": false
+}

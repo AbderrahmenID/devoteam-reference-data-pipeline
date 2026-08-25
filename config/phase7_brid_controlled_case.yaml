@@ -1,0 +1,95 @@
+schema_version: 2
+phase: 7
+pipeline_version: phase7_brid_hybrid_matching_v2
+
+input:
+  snapshot_id: 20260714T154731Z_129ff982c8
+  phase4_run_name: phase4_corpus_v1
+  phase5_run_name: phase5_hybrid_retrieval_v1
+  phase5_2_run_name: phase5_2_matching_hardening_v1
+  opportunity_id: OPP-2098dd1874292d22
+  phase6_run_name: phase6_brid_controlled_case_v2
+  review_workbook_name: BRID_PHASE_6_REVIEW.xlsx
+  required_label: SYNTHETIC_TEST_ONLY
+  required_review_status: HUMAN_REVIEW_APPROVED_SYNTHETIC_TEST_ONLY
+  expected_review_workbook_sha256: 1174cd62a8685407a783f0df1ef85519cb0250027e27a666b92d38b8879fb304
+  expected_phase5_2_manifest_sha256: 17ec179da0c191173db15bde1662944f4c3c90f55deafb365a1c8dc65167b1c8
+  expected_phase5_2_sha256sums_sha256: b45b766b877d7da2a153c38934dfd30449c51f72a23585507c467dd1f44b96b0
+  expected_reference_contract_sha256: 49657c465d3db41a15a8e4c3538bee93a9c1f90503c8d6e0e2c75b69e1161fc2
+  expected_requirements: 16
+  expected_eligibility_rules: 7
+  expected_scoring_criteria: 6
+  expected_filters: 11
+
+review:
+  accepted_decisions: [APPROVE, EDIT]
+  rejected_decision: REJECT
+  pending_decision: PENDING
+  required_sheets: [Overview, Requirements, EligibilityRules, Scoring, Filters]
+  matching_routes: [MATCH]
+  policy_routes: [POLICY]
+  non_retrieval_routes: [SUBMISSION, NON_MATCH]
+  require_every_row_reviewed: true
+  require_confirmed_filters: true
+
+security:
+  classification: INTERNAL
+  allowed_classifications_for_controlled_test: [PUBLIC, INTERNAL]
+  external_llm_enabled: false
+  external_embedding_api_enabled: false
+  raw_offer_logging_allowed: false
+  security_filters_disableable: false
+  source_mutation_allowed: false
+  authorization_before_scoring_required: true
+
+retrieval:
+  mode: hybrid
+  development_fusion_label: BOOTSTRAP_90_10_SYNTHETIC_ONLY
+  lexical_weight: 0.90
+  dense_weight: 0.10
+  candidate_references: 100
+  maximum_recommendations: 100
+  cross_encoder_enabled: false
+  local_embedding_model_required: true
+  query_terms_appended: true
+
+eligibility:
+  signed_attestation_evidence_types:
+    - ATTESTATION_ORIGINAL
+    - ATTESTATION_SCAN
+  portfolio_rule_levels: [PORTFOLIO_COUNT]
+  per_reference_rule_levels: [PER_REFERENCE]
+  maximum_portfolio_references: 10
+  minimum_portfolio_references: 3
+  maximum_one_per_duplicate_group: true
+  individual_must_gate_replaced_by_portfolio_gate: true
+  global_portfolio_filters_forbidden:
+    - year_start
+    - year_end
+    - sector_code
+    - region
+  user_filter_behavior: USER_FILTER
+  user_filter_application_layer: FACET
+
+scoring:
+  tender_points_total: 100
+  expected_technical_threshold: 75
+  human_only_routes: [TEAM_REVIEW, METHOD_REVIEW]
+  reference_routes: [REFERENCE_PORTFOLIO, REFERENCE_PORTFOLIO_AND_ORG]
+  production_score_claim_allowed: false
+  points_awarded_automatically: false
+
+promotion:
+  phase5_1_expert_evaluation_required: true
+  citation_correctness_human_audit_required: true
+  business_shortlist_auto_approval: false
+  production_promotion_allowed: false
+
+output:
+  root: data/recommendations
+  run_name: phase7_brid_hybrid_matching_v2
+  success_marker: _SUCCESS.json
+  manifest_name: PHASE_7_BRID_MANIFEST.json
+  quality_gate_name: PHASE_7_BRID_QUALITY_GATE.json
+  report_name: PHASE_7_BRID_REPORT.md
+  review_workbook_name: BRID_PHASE_7_REVIEW.xlsx

@@ -1,0 +1,118 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+service-account*.json
+
+# Python environments, caches, tests, and coverage
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage/
+htmlcov/
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+.DS_Store
+
+# Notebook noise
+.ipynb_checkpoints/
+
+# Runtime logs and temporary work
+logs/*
+temp/
+tmp/
+scratch/
+*.log
+*.tmp
+*.bak
+reports/generated/*
+manifests/runs/*
+
+# External model/OCR caches. Models are dependencies, not repository assets.
+.cache/
+models/
+model_cache/
+ocr_cache/
+ocr_temp/
+render_cache/
+renders/
+huggingface/
+torch_cache/
+ollama/
+
+# Private source documents and local human inputs
+data/raw/**
+!data/raw/
+!data/raw/README.md
+data/snapshots/*/raw/
+data/snapshots/*/manifests/
+data/snapshots/*/reports/
+human_inputs/phase6/OPPORTUNITY_INPUT.*
+human_inputs/phase8/REFERENCE_TEMPLATE.docx
+
+# Generated/internal pipeline datasets. Keep local; retain the small signed
+# manifests and statistics below so corpus lineage remains reviewable.
+data/extracted/**
+!data/extracted/
+!data/extracted/*/
+!data/extracted/*/*/
+!data/extracted/*/*/PHASE_*_MANIFEST.json
+!data/extracted/*/*/SHA256SUMS.txt
+!data/extracted/*/*/_SUCCESS.json
+
+data/canonical/**
+!data/canonical/
+!data/canonical/.gitkeep
+!data/canonical/*/
+!data/canonical/*/*/
+!data/canonical/*/*/PHASE_4_MANIFEST.json
+!data/canonical/*/*/SHA256SUMS.txt
+!data/canonical/*/*/_SUCCESS.json
+!data/canonical/*/*/corpus_statistics.json
+
+data/indexes/**
+!data/indexes/
+!data/indexes/.gitkeep
+!data/indexes/*/
+!data/indexes/*/*/
+!data/indexes/*/*/PHASE_*_MANIFEST.json
+!data/indexes/*/*/PHASE_*_QUALITY_GATE.json
+!data/indexes/*/*/SHA256SUMS.txt
+!data/indexes/*/*/_SUCCESS.json
+!data/indexes/*/*/retrieval_runtime.json
+
+data/evaluations/**
+data/opportunities/**
+data/recommendations/**
+data/deliverables/**
+
+# Generated audited exports contain internal evidence and stay local by default.
+BRID_PHASE_7_EVIDENCE_AUDIT.xlsx
+BRID_REFERENCE_DOSSIER_*
+PHASE_7_BRID_EVIDENCE_AUDIT.*
+PHASE_8_BRID_AUDITED_EXPORT_RELEASE.zip
+PHASE_8_BRID_MANIFEST.json
+PHASE_8_BRID_RELEASE_MANIFEST.json
+PHASE_8_BRID_REPORT.md
+PHASE_8_BRID_SHA256SUMS.txt
+PHASE_8_BRID_SUCCESS.json
+
+# Preserve directory placeholders
+!data/**/.gitkeep
+!logs/.gitkeep
+!manifests/runs/.gitkeep
+!reports/generated/.gitkeep

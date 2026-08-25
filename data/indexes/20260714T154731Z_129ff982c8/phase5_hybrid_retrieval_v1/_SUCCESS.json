@@ -1,0 +1,8 @@
+{
+  "created_at_utc": "2026-07-17T20:52:23Z",
+  "manifest_sha256": "2d48709a8e4b6408d99505dc4fe7c075f6f6406970ee0c5cfead93288ed97ec3",
+  "pipeline_version": "phase5_hybrid_retrieval_v1",
+  "sha256sums_sha256": "b5601ad302ab8dbaa416a54ac4dcff574e931174926d62ed87379204833c1729",
+  "snapshot_id": "20260714T154731Z_129ff982c8",
+  "status": "COMPLETE_REPRODUCIBLE_HYBRID_INDEX"
+}

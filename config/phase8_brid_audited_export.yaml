@@ -1,0 +1,66 @@
+schema_version: 1
+phase: 8
+pipeline_version: phase8_brid_audited_export_v2
+label: SYNTHETIC_TEST_ONLY
+
+inputs:
+  opportunity_id: OPP-2098dd1874292d22
+  audit_workbook_name: BRID_PHASE_7_EVIDENCE_AUDIT.xlsx
+  audit_workbook_sha256: 270b459b9336bc364e017fb1deac9ceaa006ac00965e29ef899f3ece4392ff91
+  audit_workbook_size_bytes: 141779
+  reference_template_name: REFERENCE_TEMPLATE.docx
+  reference_template_sha256: a58e409010992f9a8b7a958ebbc7bf7d3fe06dc1043287fd2db72bedca5334da
+  reference_template_size_bytes: 16228690
+  source_phase7_status: TECHNICAL_PASS_READY_FOR_EVIDENCE_AUDIT
+  audit_status: AI_ASSISTED_EVIDENCE_AUDIT_COMPLETE
+
+approval:
+  required_status: APPROVED
+  required_scope: PHASE_7_BRID_AUDITED_SHORTLIST
+  expected_statement: I approve the audited shortlist.
+  mutate_audit_workbook: false
+
+contracts:
+  selected_references: 10
+  eligibility_rules_total: 7
+  eligibility_rules_passed: 7
+  must_requirements_total: 8
+  must_requirements_covered: 8
+  should_requirements_total: 3
+  should_requirements_covered: 2
+  explicit_gaps:
+    - SCOPE-CLOUD
+  citation_rows_total: 203
+  citation_rows_supported: 79
+  citation_rows_partial: 24
+  citation_rows_unsupported: 100
+  scoring_points_available: 100
+  scoring_points_awarded: 0
+
+generation:
+  language: fr
+  mode: deterministic_audited_export
+  maximum_references: 10
+  external_llm_enabled: false
+  external_translation_enabled: false
+  automatic_client_delivery: false
+  automatic_tender_scoring: false
+  source_documents_copied: false
+  source_page_images_embedded: false
+  production_promotion_allowed: false
+
+security:
+  classification: INTERNAL
+  raw_opportunity_logging_allowed: false
+  source_mutation_allowed: false
+  hidden_content_generation_allowed: false
+
+output:
+  docx_name: BRID_REFERENCE_DOSSIER_AUDITED.docx
+  pdf_name: BRID_REFERENCE_DOSSIER_AUDITED.pdf
+  data_name: BRID_REFERENCE_DOSSIER_DATA.json
+  report_name: PHASE_8_BRID_REPORT.md
+  manifest_name: PHASE_8_BRID_MANIFEST.json
+  approval_name: PHASE_7_BRID_SHORTLIST_APPROVAL.json
+  checksum_name: SHA256SUMS.txt
+  success_name: _SUCCESS.json

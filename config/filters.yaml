@@ -1,0 +1,56 @@
+schema_version: 1
+catalogue: G1
+
+automatic_security_filters:
+  - user_authorization
+  - role_authorization
+  - reference_confidentiality
+  - document_access_level
+  - external_use_authorization
+  - prohibited_source_category
+
+immediately_supported:
+  - country
+  - region
+  - sector
+  - offering
+  - business_unit
+  - project_year
+  - client
+  - evidence_available
+  - document_type
+  - data_quality_status
+
+enriched_after_validation:
+  - technology
+  - deliverable_type
+  - certification
+  - client_type
+  - approved_project_outcome
+  - attestation_strength
+  - evidence_language
+
+exclusions:
+  - excluded_clients
+  - excluded_countries
+  - excluded_regions
+  - excluded_sectors
+  - excluded_offerings
+  - year_before
+  - year_after
+  - without_evidence
+  - unvalidated_records
+
+requirement_importance:
+  - MUST
+  - SHOULD
+  - PREFERRED
+  - CONTEXT
+
+behavior:
+  show_all_business_filters: true
+  allow_user_correction: true
+  allow_hidden_llm_filters: false
+  security_filters_disableable: false
+  hard_filters_exclude: true
+  soft_preferences_rerank: true

@@ -1,0 +1,5 @@
+google-api-python-client>=2.130,<3
+google-auth>=2.29,<3
+openpyxl>=3.1,<4
+PyYAML>=6,<7
+pytest>=8,<9

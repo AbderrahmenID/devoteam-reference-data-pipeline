@@ -1,0 +1,50 @@
+schema_version: 1
+policy: D1
+default_classification: INTERNAL
+
+classifications:
+  PUBLIC:
+    rank: 0
+    external_llm: approved_provider_only
+    external_template: human_review
+  INTERNAL:
+    rank: 1
+    external_llm: approved_provider_and_redaction
+    external_template: human_approval
+  RESTRICTED:
+    rank: 2
+    external_llm: forbidden
+    external_template: masked_unless_specifically_approved
+  CONFIDENTIAL:
+    rank: 3
+    external_llm: forbidden
+    external_template: forbidden
+
+external_llm:
+  enabled: false
+  provider_approved: false
+  allow_unredacted_internal_content: false
+
+excluded_source_categories:
+  - CV
+  - personal_documents
+  - financial_documents
+  - sensitive_administrative_documents
+  - manager_private_documents
+
+never_ingest_fields:
+  - Valeur Projet
+  - Équipe
+  - Équipe Intervenante
+  - personal_email
+  - personal_phone
+
+sensitive_log_keys:
+  - password
+  - secret
+  - token
+  - api_key
+  - authorization
+  - credential
+  - valeur_projet
+  - equipe

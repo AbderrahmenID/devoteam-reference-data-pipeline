@@ -1,0 +1,41 @@
+schema_version: 1
+project:
+  name: Devoteam Reference Intelligence Platform
+  package_name: devoteam_reference_ai
+  release: 0.1.0
+  current_phase: 1
+  delivery_level: enterprise_pilot
+  languages:
+    primary: fr
+    supported: [fr, en, ar]
+
+drive:
+  project_root_folder_id: ${DEVOTEAM_PROJECT_FOLDER_ID:-REQUIRED_LOCAL_PROJECT_FOLDER_ID}
+  source_shortcut_id: ${DEVOTEAM_SOURCE_SHORTCUT_ID:-REQUIRED_LOCAL_SOURCE_SHORTCUT_ID}
+  source_access_mode: read_only
+  colab_project_root: ${DEVOTEAM_PROJECT_ROOT:-.}
+
+write_policy:
+  original_source_mutation_allowed: false
+  outputs_inside_source_allowed: false
+  allowed_project_roots:
+    - config
+    - src
+    - tests
+    - notebooks
+    - scripts
+    - docs
+    - requirements
+    - data
+    - logs
+    - manifests
+    - reports
+    - app
+    - api
+    - deployment
+
+run_policy:
+  timezone: Africa/Tunis
+  deterministic_seed: 42
+  require_run_manifest: true
+  require_config_hashes: true

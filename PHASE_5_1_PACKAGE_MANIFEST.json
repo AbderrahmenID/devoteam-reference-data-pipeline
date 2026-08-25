@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "phase": "5.1",
+  "pipeline_version": "phase5_1_expert_evaluation_v1",
+  "created_at_utc": "2026-07-18T11:50:00Z",
+  "package_mode": "ADDITIVE_EXTENSION",
+  "required_predecessor": "phase5_hybrid_retrieval_v1",
+  "expected_phase5_manifest_sha256": "2d48709a8e4b6408d99505dc4fe7c075f6f6406970ee0c5cfead93288ed97ec3",
+  "human_checkpoints": [
+    "QUERY_INTAKE",
+    "TWO_INDEPENDENT_LABELERS",
+    "INDEPENDENT_ADJUDICATION",
+    "CITATION_AUDIT",
+    "SUPERVISOR_REVIEW"
+  ],
+  "anti_leakage_policy": "FROZEN_TEST_ONLY_NO_TUNING",
+  "automatic_production_promotion": false,
+  "external_llm_calls_allowed": false,
+  "external_embedding_api_calls_allowed": false,
+  "source_mutation_allowed": false,
+  "phase5_mutation_allowed": false,
+  "files": [
+    {
+      "path": "config/phase5_1_evaluation.yaml",
+      "sha256": "8e67b956667c3575e6d8bf621dfb3703042671f49fc6ed64737a00a78b5ed104"
+    },
+    {
+      "path": "docs/PHASE_5_1_RUNBOOK.md",
+      "sha256": "3e9e6ea5ccf6f4d518915602e2c1e95f20fcdb327aece4118bc187082a6d2d45"
+    },
+    {
+      "path": "requirements/phase5_1.txt",
+      "sha256": "9bba605fd7b6ea23038de15e5a1ae6714b3d3fb14ed2d6e6bedbfb0665ca2122"
+    },
+    {
+      "path": "src/devoteam_reference_ai/phase5_1_evaluation.py",
+      "sha256": "6b569823d0bc68a54009857402b0805a03184f77888e78ade8b5df37115d065d"
+    },
+    {
+      "path": "tests/test_phase5_1_evaluation.py",
+      "sha256": "30e11b501cfdd5e8d5df050a97c23652d2b58065b61ca1fb2bd6758b4db414bb"
+    }
+  ]
+}

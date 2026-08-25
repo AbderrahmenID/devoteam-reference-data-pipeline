@@ -1,0 +1,61 @@
+{
+  "checks": {
+    "access_control_prefilter": {
+      "passed": true,
+      "threshold": 1.0,
+      "value": 1.0
+    },
+    "citation_completeness": {
+      "passed": true,
+      "threshold": 1.0,
+      "value": 1.0
+    },
+    "citation_integrity": {
+      "passed": true,
+      "threshold": 1.0,
+      "value": 1.0
+    },
+    "duplicate_shortlist_control": {
+      "passed": true,
+      "threshold": 1.0,
+      "value": 1.0
+    },
+    "exclusions_enforced": {
+      "passed": true,
+      "threshold": 1.0,
+      "value": 1.0
+    },
+    "must_gate_enforced": {
+      "passed": true,
+      "threshold": 1.0,
+      "value": 1.0
+    },
+    "nonempty_country_mapping": {
+      "passed": true,
+      "threshold": 1.0,
+      "value": 1.0
+    },
+    "nonempty_year_parse_rate": {
+      "passed": true,
+      "threshold": 0.95,
+      "value": 1.0
+    },
+    "reference_id_completeness": {
+      "passed": true,
+      "threshold": 1.0,
+      "value": 1.0
+    },
+    "spreadsheet_serialization_safe": {
+      "passed": true,
+      "threshold": 1.0,
+      "value": 1.0
+    }
+  },
+  "citation_correctness_status": "PENDING_HUMAN_AUDIT",
+  "citation_support_proxy": 0.23444444444444443,
+  "phase": "5.2",
+  "pipeline_version": "phase5_2_matching_hardening_v1",
+  "production_promotion": "BLOCKED_PENDING_PHASE_5_1_EXPERT_EVALUATION",
+  "schema_version": 1,
+  "technical_gate": "PASS"
+}

@@ -1,0 +1,40 @@
+{
+  "created_at_utc": "2026-07-25T12:46:57Z",
+  "files": {
+    "config/phase7_brid_controlled_case.yaml": {
+      "sha256": "806d84e55d0eb144c7c112b0234e953f8a2cdfda79bd6bfae7e169f9fbae38ff",
+      "size_bytes": 3278
+    },
+    "docs/PHASE_7_BRID_RUNBOOK.md": {
+      "sha256": "d84c1e1e538547cc077de7cd1079d0792b6d8b407bbf8db81d9415fabbf9077a",
+      "size_bytes": 2064
+    },
+    "requirements/phase7_brid.txt": {
+      "sha256": "2aee363098e566c1ad0c2b1ca039d06b93d1654f2e41a3e711d98c5452de2fc0",
+      "size_bytes": 45
+    },
+    "scripts/run_phase7_brid_case.py": {
+      "sha256": "4a9125774326ffa1e8dd8cc6a7eb86da25cdf81e6609ff7790bb14978387855d",
+      "size_bytes": 1211
+    },
+    "src/devoteam_reference_ai/phase7_brid_matching.py": {
+      "sha256": "f682364a131a8d655d7eabb96df7555b67f128579c4e464abc82465c663a64f5",
+      "size_bytes": 60797
+    },
+    "tests/test_phase7_brid_matching.py": {
+      "sha256": "a8441746617832797d1db51b768e91091d04019d1d29787001ae26a38c7e76dc",
+      "size_bytes": 9600
+    }
+  },
+  "label": "SYNTHETIC_TEST_ONLY",
+  "phase": 7,
+  "pipeline_version": "phase7_brid_hybrid_matching_v2",
+  "schema_version": 1,
+  "security_boundary": {
+    "business_shortlist_auto_approval": false,
+    "external_embedding_api_enabled": false,
+    "external_llm_enabled": false,
+    "production_promotion_allowed": false,
+    "source_mutation_allowed": false
+  }
+}

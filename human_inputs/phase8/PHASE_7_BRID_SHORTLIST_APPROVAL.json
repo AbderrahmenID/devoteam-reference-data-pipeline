@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "approval_status": "APPROVED",
+  "approval_scope": "PHASE_7_BRID_AUDITED_SHORTLIST",
+  "approval_statement": "I approve the audited shortlist.",
+  "approved_at_utc": "2026-07-25T14:27:56Z",
+  "approval_source": "EXPLICIT_USER_CONFIRMATION_IN_PROJECT_CONVERSATION",
+  "approver_identity_recorded": false,
+  "source_workbook_name": "BRID_PHASE_7_EVIDENCE_AUDIT.xlsx",
+  "source_workbook_sha256": "270b459b9336bc364e017fb1deac9ceaa006ac00965e29ef899f3ece4392ff91",
+  "decision_boundary": "Approval authorizes the controlled synthetic Phase 8 export only. It does not award tender points, approve a real business submission, or authorize production/client delivery.",
+  "label": "SYNTHETIC_TEST_ONLY"
+}

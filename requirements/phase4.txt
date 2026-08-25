@@ -1,0 +1,2 @@
+-r phase3_1.txt
+openpyxl>=3.1,<4

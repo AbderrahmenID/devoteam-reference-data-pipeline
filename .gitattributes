@@ -1,0 +1,13 @@
+*.pdf binary
+*.docx binary
+*.pptx binary
+*.xlsx binary
+*.xls binary
+*.zip binary
+*.parquet binary
+*.npy binary
+*.npz binary
+*.index binary
+*.png binary
+*.jpg binary
+*.jpeg binary

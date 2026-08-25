@@ -1,0 +1,67 @@
+schema_version: 1
+phase: 4
+pipeline_version: phase4_corpus_v1
+
+input:
+  snapshot_id: 20260714T154731Z_129ff982c8
+  phase3_1_run_name: phase3_1_targeted_repair_v1
+  expected_phase3_1_manifest_sha256: 2e13054529715036c4c4688d720352b3cd686cb28e0a16fa95ed2a4ce1982c96
+  expected_curated_pages_sha256: 7d75980f4969735716dbaf7e011ebcfece8a7c788f973225a567010b88ca1060
+  expected_master_workbook_sha256: 2a4d7bf2317bb8a8f24d98a2db3b4f481689fc1ace8b1817c6e13932131cb604
+  expected_evidence_links_sha256: 9469ada46f84672467c6162bbcc0d33f4aa18dc53f5306682fa83e34522f9528
+  expected_evidence_targets_sha256: a37bd6e78b6b4c89c3d09d8da26c772516fba0fbb05c3c0129cf9910ca8c0d15
+  expected_total_pages: 408
+  expected_eligible_pages: 389
+  expected_excluded_pages: 19
+  expected_documents: 134
+  expected_retrieval_documents: 132
+  expected_reference_rows: 161
+  expected_missing_evidence_targets: 21
+  expected_chunks: 1185
+
+master_metadata:
+  sheet: BDOD
+  link_source_header: "#Réf"
+  fields:
+    reference_number: "N°"
+    country: "Pays"
+    business_unit: "BU"
+    company_domain: "Nom de domaine de l'entreprise"
+    client: "Client"
+    sector: "Secteur"
+    service_nature: "Nature de la Prestation"
+    funding: "Financement"
+    offering: "Offre"
+    project_year: "Année de Réalisation"
+    attestation_available: "Attestation de référence"
+  forbidden_headers:
+    - "Valeur Projet"
+    - "Equipe Intervenante"
+    - "Équipe Intervenante"
+    - "Commentaire"
+
+cleaning:
+  source_text_column: text_redacted
+  dehyphenate_line_breaks: true
+  remove_punctuation_only_lines: true
+  preserve_paragraph_breaks: true
+  minimum_page_characters: 40
+
+chunking:
+  max_characters: 900
+  overlap_characters: 120
+  minimum_characters: 120
+  boundary_window_characters: 180
+  page_constrained: true
+
+security:
+  classification: INTERNAL
+  external_llm_enabled: false
+  raw_text_allowed_in_outputs: false
+  source_mutation_allowed: false
+  phase3_output_mutation_allowed: false
+
+output:
+  root: data/canonical
+  run_name: phase4_corpus_v1
+  success_marker: _SUCCESS.json

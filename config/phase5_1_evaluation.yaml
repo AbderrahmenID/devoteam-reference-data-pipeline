@@ -1,0 +1,86 @@
+schema_version: 1
+phase: "5.1"
+pipeline_version: phase5_1_expert_evaluation_v1
+
+input:
+  snapshot_id: 20260714T154731Z_129ff982c8
+  phase5_run_name: phase5_hybrid_retrieval_v1
+  expected_phase5_manifest_sha256: 2d48709a8e4b6408d99505dc4fe7c075f6f6406970ee0c5cfead93288ed97ec3
+  expected_phase5_sha256sums_sha256: b5601ad302ab8dbaa416a54ac4dcff574e931174926d62ed87379204833c1729
+  expected_chunks: 1185
+  expected_embedding_dimensions: 768
+
+queries:
+  target_count: 50
+  min_normalized_characters: 20
+  max_characters: 4000
+  allowed_languages: [fr, en, ar]
+  language_minimums:
+    fr: 30
+    en: 5
+    ar: 5
+  required_query_types:
+    ACRONYM_HEAVY: 5
+    SPARSE: 5
+    AMBIGUOUS: 5
+  allowed_origins: [REAL_OPPORTUNITY, APPROVED_REALISTIC]
+  require_not_derived_from_reference_corpus: true
+
+retrieval:
+  systems: [bm25, dense, hybrid]
+  judging_depth_per_system: 10
+  allowed_security_classifications: [PUBLIC, INTERNAL]
+  deterministic_blinding_seed: devoteam-phase5-1-v1
+
+labeling:
+  labelers_required: 2
+  relevance_values: [0, 1, 2]
+  binary_relevance_threshold: 1
+  require_adjudicator: true
+  minimum_weighted_kappa: 0.60
+  failure_categories:
+    - NONE
+    - WRONG_SECTOR
+    - WRONG_COUNTRY
+    - WRONG_OFFERING
+    - WRONG_CLIENT_TYPE
+    - TOO_OLD
+    - WEAK_EVIDENCE
+    - OCR_OR_DATA_QUALITY
+    - FILTER_MISMATCH
+    - DUPLICATE_REFERENCE
+    - OTHER
+
+citation_audit:
+  target_sample: 100
+  deterministic_seed: devoteam-phase5-1-citations-v1
+
+evaluation:
+  bootstrap_samples: 2000
+  bootstrap_seed: 20260714
+  primary_metric: recall_at_10
+  metrics: [recall_at_10, precision_at_5, mrr, ndcg_at_10]
+  pilot_gates:
+    recall_at_10: 0.85
+    deterministic_filter_correctness: 1.00
+    citation_correctness: 0.98
+  indicative_secondary_targets:
+    precision_at_5: 0.75
+    mrr: 0.75
+    ndcg_at_10: 0.75
+  no_automatic_production_promotion: true
+  gold_set_purpose: FROZEN_TEST_ONLY_NO_TUNING
+
+security:
+  classification: INTERNAL
+  external_llm_enabled: false
+  external_embedding_api_enabled: false
+  source_mutation_allowed: false
+  phase4_output_mutation_allowed: false
+  phase5_output_mutation_allowed: false
+  raw_query_operational_logging_allowed: false
+
+output:
+  root: data/evaluations
+  run_name: phase5_1_expert_evaluation_v1
+  success_marker: _SUCCESS.json

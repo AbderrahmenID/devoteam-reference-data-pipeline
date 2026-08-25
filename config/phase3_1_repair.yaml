@@ -1,0 +1,47 @@
+schema_version: 1
+phase: 3.1
+pipeline_version: phase3_1_targeted_repair_v1
+
+input:
+  snapshot_id: 20260714T154731Z_129ff982c8
+  phase3_run_name: phase3_extract_v1
+  expected_phase3_manifest_sha256: ef941b67ef521d6208129d84700a765d1c42cdc5ca11622829495f27dfde3aec
+  expected_phase3_pages_sha256: 1122af031dd9b60b8bcb404cdf2bfa5953e3c57d5628600c2f10d9612847abc0
+  expected_total_pages: 408
+  expected_target_pages: 21
+  expected_review_pages: 17
+  expected_failed_pages: 4
+
+repair:
+  render_dpi: 300
+  latin_languages: fra+eng
+  arabic_languages: ara+fra
+  mixed_languages: fra+eng+ara
+  psm_candidates: [3, 6, 11]
+  max_attempts_per_page: 6
+  tesseract_timeout_seconds: 120
+  early_stop_confidence: 78
+  preview_dpi: 120
+  preview_max_dimension: 1800
+
+quality:
+  pass_min_characters: 80
+  review_min_characters: 20
+  pass_min_words: 10
+  ocr_pass_min_confidence: 60
+  ocr_review_min_confidence: 35
+
+security:
+  classification: INTERNAL
+  persist_raw_text: true
+  create_redacted_text: true
+  redact_email: true
+  redact_phone_like_numbers: true
+  redact_iban: true
+  redact_monetary_amounts: true
+  external_llm_enabled: false
+
+output:
+  root: data/extracted
+  run_name: phase3_1_targeted_repair_v1
+  success_marker: _SUCCESS.json

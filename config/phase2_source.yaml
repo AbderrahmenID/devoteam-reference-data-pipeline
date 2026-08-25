@@ -1,0 +1,73 @@
+schema_version: 1
+phase: 2
+
+source:
+  source_shortcut_id: ${DEVOTEAM_SOURCE_SHORTCUT_ID:-REQUIRED_LOCAL_SOURCE_SHORTCUT_ID}
+  access_mode: read_only
+  master_workbook:
+    preferred_names:
+      - Base de Donnée Références Devoteam.xlsx
+      - Base de Donnees References Devoteam.xlsx
+    sheet_candidates: [BDOD]
+    header_scan_rows: 12
+
+inventory:
+  max_depth: 25
+  max_items: 20000
+
+exclusions:
+  # These fields may exist in the workbook but their values must never be
+  # extracted, persisted, logged, embedded, or sent to an LLM.
+  never_ingest_headers:
+    - Valeur Projet
+    - Valeur du Projet
+    - Équipe
+    - Equipe
+    - Équipe Intervenante
+    - Equipe Intervenante
+    - Personal Email
+    - Personal Phone
+  # URLs in these columns are not evidence and must never be followed.
+  never_follow_link_headers:
+    - Site web
+    - Website
+    - Logo
+  excluded_path_terms:
+    - CV
+    - Curriculum Vitae
+    - Personal Documents
+    - Documents personnels
+    - Financial Documents
+    - Documents financiers
+    - Sensitive Administrative Documents
+    - Documents administratifs sensibles
+    - Manager Private Documents
+    - Documents privés manager
+
+evidence:
+  expand_linked_folders: true
+  linked_folder_max_depth: 5
+  max_file_bytes: 262144000
+  allowed_mime_types:
+    - application/pdf
+    - application/msword
+    - application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    - application/vnd.ms-excel
+    - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    - application/vnd.ms-powerpoint
+    - application/vnd.openxmlformats-officedocument.presentationml.presentation
+    - image/jpeg
+    - image/png
+    - image/tiff
+    - text/plain
+    - text/rtf
+    - application/rtf
+    - application/vnd.google-apps.document
+    - application/vnd.google-apps.spreadsheet
+    - application/vnd.google-apps.presentation
+
+output:
+  snapshots_dir: data/snapshots
+  write_csv: true
+  write_jsonl: true
+  immutable_success_marker: _SUCCESS.json

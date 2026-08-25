@@ -1,0 +1,41 @@
+{
+  "chunk_characters_max": 900,
+  "chunk_characters_mean": 737.6,
+  "chunk_characters_total": 874057,
+  "chunks_total": 1185,
+  "document_languages": {
+    "ar": 1,
+    "en": 3,
+    "en-ar": 1,
+    "fr": 127,
+    "und": 2
+  },
+  "document_quality": {
+    "NO_ELIGIBLE_PAGES": 2,
+    "PARTIAL_PAGE_EXCLUSION": 5,
+    "PASS": 127
+  },
+  "document_types": {
+    "ATTESTATION": 92,
+    "CONTRACT": 18,
+    "MINUTES": 10,
+    "OTHER_EVIDENCE": 7,
+    "SPECIFICATION": 7
+  },
+  "documents_retrieval_eligible": 132,
+  "documents_total": 134,
+  "documents_without_eligible_pages": 2,
+  "duplicate_chunks": 2,
+  "duplicate_groups": 1,
+  "missing_evidence_references": 21,
+  "page_languages": {
+    "ar": 15,
+    "en": 49,
+    "fr": 322,
+    "fr-ar": 3
+  },
+  "pages_canonical": 389,
+  "pages_excluded": 19,
+  "pages_input_total": 408,
+  "references_total": 161
+}

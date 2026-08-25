@@ -1,0 +1,3 @@
+-r phase4.txt
+sentence-transformers>=3.3,<4
+faiss-cpu>=1.8,<2

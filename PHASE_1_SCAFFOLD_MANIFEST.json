@@ -1,0 +1,187 @@
+{
+  "artifact": "phase1_foundation_scaffold",
+  "file_count": 34,
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "fd3319426c4aeafc4a550f7a5e20cd6e08ad1e9cd117e52ef10a2f1ee40ae471",
+      "size_bytes": 355
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "f40135208c5fe5d9b48eee29b90691cd8d4562d99787696ff83b081e05839502",
+      "size_bytes": 485
+    },
+    {
+      "path": "README_START_HERE.md",
+      "sha256": "801de4020ea494b1cff01a3a6e949adb419163eaf2f0789fe5f5e36825dd2aa0",
+      "size_bytes": 1053
+    },
+    {
+      "path": "api/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size_bytes": 1
+    },
+    {
+      "path": "app/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size_bytes": 1
+    },
+    {
+      "path": "config/filters.yaml",
+      "sha256": "cf49e80d13c5f9140c3237f28d09457f53219fed6e86f9a2a30ad141bf63c8c9",
+      "size_bytes": 1059
+    },
+    {
+      "path": "config/logging.yaml",
+      "sha256": "f4b7f6ce228311f711a2764137176fdc522808db429b845972e2445752b2a8eb",
+      "size_bytes": 300
+    },
+    {
+      "path": "config/models.yaml",
+      "sha256": "d7dfe08c224e39897c86b161638dddddd884749ca6eed2709cf735399ce913c7",
+      "size_bytes": 619
+    },
+    {
+      "path": "config/project.yaml",
+      "sha256": "71a6b72251143c38030de6075f61d75216d8dc56467fba64ef18f8d9d4cd870a",
+      "size_bytes": 918
+    },
+    {
+      "path": "config/security.yaml",
+      "sha256": "8887adfbd68ccf478bd4a2fb5e3426a4c395af325a19a2cb8a5e2cb10e741324",
+      "size_bytes": 992
+    },
+    {
+      "path": "data/canonical/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size_bytes": 1
+    },
+    {
+      "path": "data/indexes/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size_bytes": 1
+    },
+    {
+      "path": "data/snapshots/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size_bytes": 1
+    },
+    {
+      "path": "deployment/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size_bytes": 1
+    },
+    {
+      "path": "docs/PHASE_1_RUNBOOK.md",
+      "sha256": "d156ae3a4f06e2ef6e697c7df4326b1efd170b190c2fe1b3026a4ea9f6d7cde5",
+      "size_bytes": 1203
+    },
+    {
+      "path": "logs/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size_bytes": 1
+    },
+    {
+      "path": "manifests/runs/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size_bytes": 1
+    },
+    {
+      "path": "notebooks/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size_bytes": 1
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "eca095fe52da8a21d94346ece60f8c6280d5ec41031c137829b587e07f18b39b",
+      "size_bytes": 509
+    },
+    {
+      "path": "reports/generated/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size_bytes": 1
+    },
+    {
+      "path": "requirements/base.txt",
+      "sha256": "67c8f42a1e1b61add69d2a7cc83603494ae8e887c51ff5825eed05de9b4044e8",
+      "size_bytes": 14
+    },
+    {
+      "path": "requirements/dev.txt",
+      "sha256": "ac0c497b052b5f0e7d90d7aa8d867db1d80a7540e8bbfde35e75bb124103e8b3",
+      "size_bytes": 60
+    },
+    {
+      "path": "scripts/validate_foundation.py",
+      "sha256": "c17968ad672e196ecd2d326e7c03f9ff27d9b154d64b7c39a5db6b4e11cfe2a2",
+      "size_bytes": 1797
+    },
+    {
+      "path": "src/devoteam_reference_ai/__init__.py",
+      "sha256": "80e9aa7f291e25543159a36eac6e979802d347169b0e0b6832c7b4bde6f2aeee",
+      "size_bytes": 85
+    },
+    {
+      "path": "src/devoteam_reference_ai/config.py",
+      "sha256": "f003d1a6245a28fd392360fc4544a772ea5d899ecff2bc427f5188e500edea8b",
+      "size_bytes": 3795
+    },
+    {
+      "path": "src/devoteam_reference_ai/hashing.py",
+      "sha256": "653fcaa0e283ae4947305c7491f21c65a77064734b7fa9852ade73e93bcaafb9",
+      "size_bytes": 502
+    },
+    {
+      "path": "src/devoteam_reference_ai/logging_utils.py",
+      "sha256": "0c51d235573047991eb9282c7fd534a711bd20d03f16a73a254175cb99bf7f35",
+      "size_bytes": 335
+    },
+    {
+      "path": "src/devoteam_reference_ai/paths.py",
+      "sha256": "42f0919813d47ac85debe8cfe0d3ef346c57d2da514b7e23893f8a5df9da4a2d",
+      "size_bytes": 2117
+    },
+    {
+      "path": "src/devoteam_reference_ai/run_context.py",
+      "sha256": "79d9b93bdb841dd222622a06b69e06764f3afced25225afbdc6e292760274da3",
+      "size_bytes": 1609
+    },
+    {
+      "path": "src/devoteam_reference_ai/security.py",
+      "sha256": "051fc2299364e85a12993a633e24f70aacc4b8b2bd5b8f90cb6ff6219b792973",
+      "size_bytes": 1217
+    },
+    {
+      "path": "tests/test_config.py",
+      "sha256": "469e9a9fefc0853207e14c66bf5d65e1e24d08037216cd84f17267b3fbcc67e4",
+      "size_bytes": 634
+    },
+    {
+      "path": "tests/test_paths.py",
+      "sha256": "e68144ea2258cd6d1febe6330fa2c3b016c4222be2c5fe78d0c861b95bef3632",
+      "size_bytes": 962
+    },
+    {
+      "path": "tests/test_run_context.py",
+      "sha256": "9c00bdf4613da3d04b75d88de02c696994924baf64fa579178262e06a8cb8351",
+      "size_bytes": 910
+    },
+    {
+      "path": "tests/test_security.py",
+      "sha256": "8f7610dd0f96c70b549a743b99e6c587de547644b9e48ad385b686f7a8728c5f",
+      "size_bytes": 1963
+    }
+  ],
+  "phase_zero_decisions": [
+    "A1",
+    "B1",
+    "C1",
+    "D1",
+    "E1",
+    "F1",
+    "G1"
+  ],
+  "schema_version": 1,
+  "source_processing_performed": false
+}

@@ -1,0 +1,32 @@
+{
+  "artifacts": {
+    "08_PHASE_7_EVIDENCE_RECOMMENDATIONS.ipynb": {
+      "sha256": "616fb79960d5aa953bdf5c0fc2cac1afcf0d57f8722d601a2a53982979452c46",
+      "size_bytes": 11142
+    },
+    "PHASE_7_EVIDENCE_RECOMMENDATIONS_PACKAGE.zip": {
+      "sha256": "fa3b62f3e3b83f8b79b6551c104abbd4cc6708692193c9de6ec89f089fc38e3d",
+      "size_bytes": 17394
+    },
+    "PHASE_7_PACKAGE_MANIFEST.json": {
+      "sha256": "b78f47c89b5255dc410aa2eb899c737f92784db85000eafa06d09f7456ccc41d",
+      "size_bytes": 1818
+    }
+  },
+  "limitations": [
+    "Sample output is not a client deliverable.",
+    "Phase 5.1 expert evaluation remains pending.",
+    "Business shortlist approval is mandatory for real opportunities."
+  ],
+  "phase": 7,
+  "schema_version": 1,
+  "status": "VALIDATED_FOR_SAMPLE_TECHNICAL_RUN",
+  "validation": {
+    "citation_coverage": 1.0,
+    "full_project_regression": "114 passed",
+    "notebook_execution": "PASS",
+    "phase7_tests": "21 passed",
+    "sample_evidence_rows": 74,
+    "sample_recommendations": 10
+  }
+}

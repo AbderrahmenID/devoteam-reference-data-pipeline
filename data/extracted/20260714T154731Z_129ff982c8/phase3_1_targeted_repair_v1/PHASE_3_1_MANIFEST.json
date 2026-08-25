@@ -1,0 +1,23 @@
+{
+  "completed_at_utc": "2026-07-17T18:12:47Z",
+  "curated_pages_total": 408,
+  "external_llm_calls": 0,
+  "pages_repaired_to_pass": 4,
+  "pages_still_failed": 0,
+  "pages_still_review": 17,
+  "pages_targeted": 21,
+  "phase": 3.1,
+  "phase3_manifest_sha256": "ef941b67ef521d6208129d84700a765d1c42cdc5ca11622829495f27dfde3aec",
+  "phase3_output_mutation_calls": 0,
+  "phase3_pages_sha256": "1122af031dd9b60b8bcb404cdf2bfa5953e3c57d5628600c2f10d9612847abc0",
+  "pipeline_version": "phase3_1_targeted_repair_v1",
+  "qa_gate": "REVIEW_REQUIRED",
+  "repair_processing_failures": 0,
+  "retrieval_eligible_pages": 389,
+  "retrieval_excluded_pages": 19,
+  "schema_version": 1,
+  "snapshot_id": "20260714T154731Z_129ff982c8",
+  "source_snapshot_mutation_calls": 0,
+  "status": "PASS",
+  "unresolved_documents": 6
+}

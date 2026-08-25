@@ -1,0 +1,8 @@
+{
+  "created_at_utc": "2026-07-17T19:49:30Z",
+  "manifest_sha256": "219643d0b1fa7ae81ebd041615a1f2c56b8cdca56f782b557a1c84f8aa599104",
+  "pipeline_version": "phase4_corpus_v1",
+  "sha256sums_sha256": "5983c0b2676b31a4fe1402869d75368649ed296039167f40011043a465d8621f",
+  "snapshot_id": "20260714T154731Z_129ff982c8",
+  "status": "COMPLETE_REPRODUCIBLE_CANONICAL_CORPUS"
+}

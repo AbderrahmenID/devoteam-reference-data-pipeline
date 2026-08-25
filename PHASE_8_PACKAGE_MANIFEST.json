@@ -1,0 +1,53 @@
+{
+  "automatic_client_delivery": false,
+  "automatic_production_promotion": false,
+  "expected_template_sha256": "a58e409010992f9a8b7a958ebbc7bf7d3fe06dc1043287fd2db72bedca5334da",
+  "external_llm_calls": 0,
+  "external_translation_calls": 0,
+  "files": {
+    "config/phase8_template_generation.yaml": {
+      "sha256": "16a3e17f79c388c019db8bcd09e8cdf849d8bded5e5c872bc139c9fe5d91602b",
+      "size_bytes": 1292
+    },
+    "docs/PHASE_8_RUNBOOK.md": {
+      "sha256": "5feec698a1a10308981f504fd603fae2fd60347134299b9a3c32a9439edc7ab5",
+      "size_bytes": 1756
+    },
+    "requirements/phase8.txt": {
+      "sha256": "b788ad8dedb01e00fc9a75b98e89268b7697b1677f5437e636e0c7359169271f",
+      "size_bytes": 124
+    },
+    "src/devoteam_reference_ai/phase8_template_generation.py": {
+      "sha256": "57d9d7a7ded312aaa8b3a5644a8d503d68ee3e540136e533ef430acdd9e6c90e",
+      "size_bytes": 41001
+    },
+    "tests/test_phase8_template_generation.py": {
+      "sha256": "ba1884b971716a1c1a89fdd89b89f9eba519ad20fc3f8db1475f1f36e2084878",
+      "size_bytes": 12000
+    }
+  },
+  "full_regression_test_result": "142 passed",
+  "generation_mode": "deterministic_template_derived",
+  "human_checkpoint": "BUSINESS_AND_SECURITY_DOSSIER_VALIDATION",
+  "package_mode": "ADDITIVE_EXTENSION",
+  "package_type": "SAFE_PROJECT_OVERLAY",
+  "phase": 8,
+  "phase5_1_expert_evaluation_bypassed": false,
+  "phase8_test_result": "28 passed",
+  "pipeline_version": "phase8_reference_dossier_v1",
+  "required_predecessor": "phase7_evidence_recommendations_v1",
+  "sample_validation": {
+    "citation_coverage": 1.0,
+    "citation_rows": 8,
+    "docx_rendered_pages": 6,
+    "pdf_rendered_pages": 6,
+    "references_requiring_evidence_review": 2,
+    "selected_references": 5,
+    "status": "TECHNICAL_PASS_SAMPLE_ONLY_WITH_EVIDENCE_WARNINGS"
+  },
+  "schema_version": 1,
+  "source_documents_copied": false,
+  "source_page_images_embedded": false,
+  "template_packaged": false,
+  "template_relative_path": "human_inputs/phase8/REFERENCE_TEMPLATE.docx"
+}

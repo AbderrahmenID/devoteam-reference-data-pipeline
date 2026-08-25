@@ -1,0 +1,100 @@
+schema_version: 1
+phase: 5
+pipeline_version: phase5_hybrid_retrieval_v1
+
+input:
+  snapshot_id: 20260714T154731Z_129ff982c8
+  phase4_run_name: phase4_corpus_v1
+  expected_phase4_manifest_sha256: 219643d0b1fa7ae81ebd041615a1f2c56b8cdca56f782b557a1c84f8aa599104
+  expected_phase4_sha256sums_sha256: 5983c0b2676b31a4fe1402869d75368649ed296039167f40011043a465d8621f
+  expected_chunks_sha256: aa6f19e1eddb17505a35b8ff9443ac76385c2d7ed2d7ba414b205cf15e1c9b0e
+  expected_documents_sha256: f7975b684941786033b2e2288cb8037caff9ed309740e0e5e0b25e23b11ff5df
+  expected_references_sha256: 13f9605cdd0fd47817e8b4c111a931d61a18413dc67202044e776d4ab4977b30
+  expected_filter_values_sha256: d21131dbc1237347ea6a2a69416cebccf133fbc9ec78f02280bfa02ffe14812e
+  expected_chunks: 1185
+  expected_documents: 134
+  expected_retrieval_documents: 132
+  expected_references: 161
+
+embedding:
+  provider: local_sentence_transformers
+  model_id: intfloat/multilingual-e5-base
+  revision: a114a4100c6714cf21651971eefe9191a4415dbb
+  license: MIT
+  dimensions: 768
+  max_tokens: 512
+  query_prefix: "query: "
+  passage_prefix: "passage: "
+  normalize_embeddings: true
+  trust_remote_code: false
+  local_execution_only: true
+  prefer_safetensors: true
+  batch_size_gpu: 32
+  batch_size_cpu: 8
+  checkpoint_every_rows: 128
+
+bm25:
+  algorithm: BM25Okapi
+  tokenizer_version: unicode_fold_v1
+  k1: 1.2
+  b: 0.75
+
+hybrid:
+  fusion: reciprocal_rank_fusion
+  rrf_k: 60
+  lexical_weight: 0.50
+  dense_weight: 0.50
+  candidate_pool_per_retriever: 100
+  default_top_k: 10
+  document_evidence_chunks: 3
+
+filters:
+  security_field: security_classification
+  supported_exact:
+    country: country_values_json
+    business_unit: business_unit_values_json
+    client: client_values_json
+    sector: sector_values_json
+    service_nature: service_nature_values_json
+    offering: offering_values_json
+    project_year: project_year_values_json
+    attestation_available: attestation_available_values_json
+    document_type: document_type
+    data_quality_status: data_quality_status
+  supported_ranges:
+    year_before: project_year_values_json
+    year_after: project_year_values_json
+  security_filters_disableable: false
+  hard_filters_exclude: true
+  hidden_llm_filters_allowed: false
+
+evaluation:
+  bootstrap_probe_count: 50
+  bootstrap_seed: 42
+  bootstrap_label_source: BOOTSTRAP_METADATA_NOT_EXPERT
+  metrics:
+    - recall_at_10
+    - precision_at_5
+    - mrr
+    - ndcg_at_10
+  technical_thresholds:
+    filter_correctness: 1.0
+    citation_coverage: 1.0
+    index_integrity: 1.0
+    bootstrap_hybrid_recall_at_10: 0.85
+  expert_gold_set_required_for_promotion: true
+  expert_query_target: 50
+  expert_labelers_required: 2
+
+security:
+  classification: INTERNAL
+  external_llm_enabled: false
+  external_embedding_api_enabled: false
+  source_mutation_allowed: false
+  phase4_output_mutation_allowed: false
+  raw_query_logging_allowed: false
+
+output:
+  root: data/indexes
+  run_name: phase5_hybrid_retrieval_v1
+  success_marker: _SUCCESS.json

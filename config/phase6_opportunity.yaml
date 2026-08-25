@@ -1,0 +1,144 @@
+schema_version: 1
+phase: 6
+pipeline_version: phase6_opportunity_analysis_v1
+
+input:
+  snapshot_id: 20260714T154731Z_129ff982c8
+  phase4_run_name: phase4_corpus_v1
+  phase5_run_name: phase5_hybrid_retrieval_v1
+  expected_phase5_manifest_sha256: 2d48709a8e4b6408d99505dc4fe7c075f6f6406970ee0c5cfead93288ed97ec3
+  expected_phase5_sha256sums_sha256: b5601ad302ab8dbaa416a54ac4dcff574e931174926d62ed87379204833c1729
+  expected_filter_values_sha256: d21131dbc1237347ea6a2a69416cebccf133fbc9ec78f02280bfa02ffe14812e
+  supported_extensions: [.txt, .md, .pdf, .docx]
+  maximum_input_bytes: 26214400
+  minimum_extracted_characters: 80
+
+analysis:
+  mode: deterministic_multilingual_rules_v1
+  minimum_unit_characters: 18
+  maximum_unit_characters: 1500
+  provider_adapter_required_for_future_llm: true
+
+requirement_rules:
+  MUST:
+    - doit
+    - devra
+    - doivent
+    - exigé
+    - exige
+    - obligatoire
+    - impératif
+    - requis
+    - must
+    - shall
+    - required
+    - mandatory
+    - يجب
+    - يتعين
+    - مطلوب
+    - إلزامي
+  SHOULD:
+    - devrait
+    - souhaité
+    - souhaitée
+    - attendu
+    - attendue
+    - should
+    - desired
+    - expected
+    - يفضل
+    - يستحسن
+  PREFERRED:
+    - préférence
+    - préféré
+    - préférée
+    - constitue un atout
+    - avantage
+    - preferred
+    - plus
+    - ميزة
+    - أفضلية
+
+filters:
+  supported_fields:
+    - country
+    - business_unit
+    - client
+    - sector
+    - service_nature
+    - offering
+    - project_year
+    - attestation_available
+    - document_type
+    - data_quality_status
+  hard_candidate_fields:
+    - country
+    - business_unit
+    - client
+    - sector
+    - service_nature
+    - offering
+    - project_year
+    - year_before
+    - year_after
+    - attestation_available
+    - document_type
+    - data_quality_status
+  minimum_value_characters: 3
+  human_confirmation_required: true
+  hidden_business_filters_allowed: false
+  value_aliases:
+    country:
+      Tunisia: Tunisie
+      Tunis: Tunisie
+      تونس: Tunisie
+      Libya: Libye
+      ليبيا: Libye
+      Côte d Ivoire: Côte d'Ivoire
+      Ivory Coast: Côte d'Ivoire
+  exclusion_markers:
+    - exclure
+    - exclu
+    - hors
+    - sauf
+    - sans
+    - exclude
+    - excluding
+    - without
+    - باستثناء
+    - بدون
+  year_experience_markers:
+    - expérience
+    - reference
+    - référence
+    - projet
+    - experience
+    - project
+    - خبرة
+    - مشروع
+  year_after_markers:
+    - depuis
+    - après
+    - after
+    - since
+    - منذ
+    - بعد
+  year_before_markers:
+    - avant
+    - before
+    - قبل
+  never_filter_fields:
+    - project value
+    - team member
+    - personal data
+
+security:
+  classification: INTERNAL
+  external_llm_enabled: false
+  raw_opportunity_logging_allowed: false
+  source_mutation_allowed: false
+  security_filters_disableable: false
+
+output:
+  root: data/opportunities
+  success_marker: _SUCCESS.json

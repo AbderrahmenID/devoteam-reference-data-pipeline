@@ -1,0 +1,72 @@
+schema_version: 1
+phase: 7
+pipeline_version: phase7_evidence_recommendations_v1
+
+input:
+  snapshot_id: 20260714T154731Z_129ff982c8
+  phase4_run_name: phase4_corpus_v1
+  phase5_run_name: phase5_hybrid_retrieval_v1
+  expected_phase5_manifest_sha256: 2d48709a8e4b6408d99505dc4fe7c075f6f6406970ee0c5cfead93288ed97ec3
+  expected_phase5_sha256sums_sha256: b5601ad302ab8dbaa416a54ac4dcff574e931174926d62ed87379204833c1729
+  expected_documents_sha256: f7975b684941786033b2e2288cb8037caff9ed309740e0e5e0b25e23b11ff5df
+  expected_references_sha256: 13f9605cdd0fd47817e8b4c111a931d61a18413dc67202044e776d4ab4977b30
+  required_phase5_files:
+    bm25_index.npz: a93b29bdb2f0e3b77c16df6066fabb3ae46f5a9bb938de2aa074c08cff6248f1
+    bm25_vocabulary.json: 701f9a19753e249dcc253ce6b393d36c6835f345aaed5beac662d5b9062e9d72
+    chunk_lookup.parquet: 50f5276fcf514c43866143dc24ee88e09320715179fa6ee5a5b5b4d2a2f3c200
+
+review:
+  synthetic_sample_auto_approval_allowed: true
+  real_opportunity_requires_complete_workbook_review: true
+
+retrieval:
+  mode: bm25_secure_baseline
+  candidate_chunks_per_requirement: 100
+  minimum_bm25_score: 0.0
+  cross_encoder_enabled: false
+
+scoring:
+  requirement_weights:
+    MUST: 1.0
+    SHOULD: 0.70
+    PREFERRED: 0.40
+    CONTEXT: 0.15
+  component_weights:
+    relevance: 0.65
+    coverage: 0.15
+    evidence_quality: 0.10
+    recency: 0.05
+    soft_preference_fit: 0.05
+  coverage_threshold: 0.25
+  reference_year: 2026
+  diversity_max_per_client: 2
+  document_type_strength:
+    ATTESTATION: 1.0
+    MINUTES: 0.90
+    CONTRACT: 0.85
+    SPECIFICATION: 0.60
+    OTHER: 0.45
+  data_quality_strength:
+    PASS: 1.0
+    GOOD: 1.0
+    WEAK_OCR: 0.65
+    REVIEW: 0.50
+    OTHER: 0.40
+
+security:
+  classification: INTERNAL
+  allowed_classifications_for_pilot: [PUBLIC, INTERNAL]
+  external_llm_enabled: false
+  external_embedding_api_enabled: false
+  raw_opportunity_logging_allowed: false
+  security_filters_disableable: false
+  source_mutation_allowed: false
+
+promotion:
+  expert_gold_set_required: true
+  automatic_production_promotion: false
+
+output:
+  root: data/recommendations
+  maximum_recommendations: 10
+  success_marker: _SUCCESS.json

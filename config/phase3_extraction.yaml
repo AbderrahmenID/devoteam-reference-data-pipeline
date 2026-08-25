@@ -1,0 +1,42 @@
+schema_version: 1
+phase: 3
+pipeline_version: phase3_extract_v1
+
+input:
+  snapshot_id: 20260714T154731Z_129ff982c8
+  expected_manifest_sha256: bdb951f42549b60dc27dc5f30e06ad362470ba802ad9dd0fab9081ead27fe4d0
+  expected_downloaded_documents: 134
+  missing_evidence_policy: preserve_as_missing_evidence
+
+extraction:
+  digital_text_min_characters: 80
+  digital_text_min_words: 10
+  pdf_render_dpi: 300
+  ocr_languages: fra+eng+ara
+  tesseract_psm: 3
+  blank_ink_ratio_threshold: 0.001
+  office_conversion_timeout_seconds: 180
+  checkpoint_every_document: true
+
+quality:
+  pass_min_characters: 80
+  review_min_characters: 20
+  ocr_pass_min_confidence: 60
+  ocr_review_min_confidence: 35
+
+security:
+  classification: INTERNAL
+  persist_raw_text: true
+  create_redacted_text: true
+  redact_email: true
+  redact_phone_like_numbers: true
+  redact_iban: true
+  redact_monetary_amounts: true
+  external_llm_enabled: false
+
+output:
+  root: data/extracted
+  run_name: phase3_extract_v1
+  write_parquet: true
+  write_document_csv: true
+  success_marker: _SUCCESS.json
